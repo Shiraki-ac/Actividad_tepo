@@ -1,22 +1,20 @@
-<?php
-setcookie("pts","0",time()+3600)
-?>
 <!doctype html>
 <html lang="es">
 
 <head>
-   <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../statics/principal_ajolote.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Hola, Ajolote!</title>
 </head>
 
-<body>
+<body class="body">
 
     <div class="botones">
-        <h2>Quieres agragar o quitar puntos?</h2>
+        <h2>Quieres agregar o quitar puntos?</h2>
         <div class="ptscasa" id="puntos"></div>
         <button class="btn" id="sumar" >+</button>
         <button class="btn" id="restar" >-</button>
@@ -28,7 +26,14 @@ setcookie("pts","0",time()+3600)
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
-    <script src="puntos.js"></script>
+    <script src="./puntos.js"></script>
 </body>
 
 </html>
+<?php
+    setcookie("pts","0",time()+3600);
+
+    include 'functions.php';
+    $conn = getConnection();
+
+?>
