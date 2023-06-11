@@ -10,6 +10,9 @@
     <title>Document</title>
 </head>
 <body class="d-flex align-items-center py-4 bg-body-tertiary">
+    <!--NavBar-->
+    
+    <!--MAIN-->
     <?php include '../templates/register.html'; ?>
     <!--Scripts-->
     <script src="../libs/bootstrap/dist/js/bootstrap.js"></script>    

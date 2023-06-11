@@ -1,11 +1,8 @@
-html, body {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    margin: 0;
-}
-.container, .row {
-    height: 100%;
+  html, body {
+      display: flex;
+      justify-content: center;
+      padding-top: 70px; 
+      margin: 0;
   }
   .form-floating{
     margin-top: 3%;
