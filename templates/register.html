@@ -2,7 +2,7 @@
     <div class="row justify-content-md-center">
         <div class="card" style="width: 25rem; height:30rem;">
             <article class="form-signin w-100 m-auto">
-                <form>
+                <form method="post" action="">
                     <h1 class="h3 mb-3 fw-normal">Registro</h1>
                     <div class="form-floating"> <!--EMAIL INPUT--> <!--email-->
                       <input type="email" class="form-control" id="email" placeholder="Tu Correp">
@@ -20,6 +20,15 @@
                         <input type="text" class="form-control" id="lname" placeholder="Tus apellidos">
                         <label for="lname">Apellidos</label>
                     </div>
+                    <div class="form-floating">
+                        <label for="casa"></label>
+                        <select id="casa" class="form-control">
+                          <option selected>Casa...</option>
+                          <option value="Teporingos">Teporingos</option>
+                          <option value="Ajolotes">Ajolotes</option>
+                          <option value="Halcones">Halcones</option>
+                        </select>
+                      </div>
                     <button class="btn btn-primary w-100 py-2" type="submit">Inicia Sesión</button>
                   </form> 
             </article>

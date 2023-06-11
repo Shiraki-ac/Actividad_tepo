@@ -2,7 +2,7 @@ import mysql.connector
 import random
 
 def generar_registros():
-    # Configura la conexión a la base de datos
+
     conexion = mysql.connector.connect(
         host="localhost",
         user="root",
@@ -11,7 +11,6 @@ def generar_registros():
     )
     cursor = conexion.cursor()
 
-    # Lista de nombres de usuarios
     nombres = [
         "Juan", "María", "Luis", "Ana", "Carlos", "Laura", "Pedro", "Sofía", "Diego", "Valeria",
         "Adrien", "Alexandre", "Antoine", "Arthur", "Auguste", "Axel", "Baptiste", "Benjamin", "Benoît", "Cédric",
@@ -30,16 +29,15 @@ def generar_registros():
         "Marie", "Marine", "Marion", "Mathilde", "Mélanie", "Morgane", "Nadia", "Nathalie", "Noémie", "Olivia"
     ]
 
-    # Lista de nombres de casas
+
     casas = ["Ajolotes", "Teporingos", "Halcones"]
 
-    # Obtener la longitud máxima de la columna usuario_email
     query = "SELECT CHARACTER_MAXIMUM_LENGTH FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'teporingoDB' AND TABLE_NAME = 'usuario' AND COLUMN_NAME = 'usuario_email'"
     cursor.execute(query)
     resultado = cursor.fetchone()
     longitud_maxima = resultado[0]
 
-    # Genera 50 registros de usuarios
+
     for i in range(50):
         nombre = random.choice(nombres)
         apellido = f"Apellido{i}"
@@ -50,29 +48,27 @@ def generar_registros():
             print(f"El correo electrónico excede la longitud máxima permitida ({longitud_maxima} caracteres).")
             continue
 
-        # Inserta el usuario en la tabla "usuario"
+
         query = "INSERT INTO usuario (usuario_name, usuario_apellido, usuario_email, usuario_psw) VALUES (%s, %s, %s, %s)"
         values = (nombre, apellido, email, psw)
         cursor.execute(query, values)
         id_usuario = cursor.lastrowid
 
-        # Asigna una casa en función del índice
+
         casa = casas[i % len(casas)]
 
-        # Inserta la casa en la tabla "casa"
         query = "INSERT INTO casa (id_usuario, casa_name) VALUES (%s, %s)"
         values = (id_usuario, casa)
         cursor.execute(query, values)
 
-        # Asigna puntos en función del índice
+
         puntos = (i + 1) * 10
 
-        # Inserta los puntos en la tabla "puntos"
+
         query = "INSERT INTO puntos (id_usuario, puntos) VALUES (%s, %s)"
         values = (id_usuario, puntos)
         cursor.execute(query, values)
 
-    # Confirma los cambios y cierra la conexión
     conexion.commit()
     cursor.close()
     conexion.close()
