@@ -1,0 +1,65 @@
+/* ============ TIPOGRAFÍAS ============ */
+@font-face 
+{
+    font-family: Bim;
+    src: url(./fonts/bim-runger-demo/Bim\ Runger\ Demo.ttf);
+}
+
+@font-face 
+{
+    font-family: Crush;
+    src: url(./fonts/broken-crush/Broken\ Crush.ttf);
+}
+
+
+
+/* ========== CASAS ========== */
+header
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.5rem;
+    margin: auto;
+    background-color: rgb(34, 34, 110);
+    width: 95%;
+    height: 8rem;
+    font-family: Bim;
+    font-size: 6rem;
+    color:rgb(255,255,255);
+}
+
+h3
+{
+    
+}
+
+.casas
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 8%;
+}
+
+.hover:hover
+{
+    transform: scale(1.2);
+}
+
+#btn-regresar
+{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(78, 129, 205);
+    border-radius: 2px;
+    color: rgb(255, 255, 255);
+}
+
+#btn
+{
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+}
