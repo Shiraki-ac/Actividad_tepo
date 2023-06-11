@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <!--CSS-->
+    <link rel="stylesheet" href="../statics/main.css">
     <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.css">
     <!--Meta-->
     <meta charset="UTF-8">
@@ -9,7 +10,7 @@
     <title>Document</title>
 </head>
 <body class="d-flex align-items-center py-4 bg-body-tertiary">
-
+    <?php include '../templates/register.html'; ?>
     <!--Scripts-->
     <script src="../libs/bootstrap/dist/js/bootstrap.js"></script>    
 </body>
