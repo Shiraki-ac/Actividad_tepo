@@ -1,20 +1,20 @@
-<div class="conteiner">
-    <div class="row justify-content-md-center">
-        <div class="card" style="width: 25rem; height:30rem;">
-            <article class="form-signin w-100 m-auto">
-                <form method="post" action="">
-                    <h1 class="h3 mb-3 fw-normal">Inicia sesión</h1>
-                    <div class="form-floating"> <!--EMAIL INPUT-->
-                      <input type="email" class="form-control" id="email" placeholder="Tu Correp">
+<div class="container">
+  <div class="row justify-content-md-center">
+      <div class="card" style="width: 25rem; height:30rem;">
+          <article class="form-signin w-100 m-auto">
+              <form method="post" action="login.php">
+                  <h1 class="h3 mb-3 fw-normal">Inicia sesión</h1>
+                  <div class="form-floating"> <!--EMAIL INPUT-->
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Tu Correo">
                       <label for="email">Correo</label>
-                    </div>
-                    <div class="form-floating"> <!--PSW-->
-                      <input type="password" class="form-control" id="psw" placeholder="Contraseña">
+                  </div>
+                  <div class="form-floating"> <!--PSW-->
+                      <input type="password" class="form-control" id="psw" name="psw" placeholder="Contraseña">
                       <label for="psw">Contraseña</label>
-                    </div>
-                    <button class="btn btn-primary w-100 py-2" type="submit">Inicia Sesión</button>
-                  </form> 
-            </article>
-        </div>
-    </div>
+                  </div>
+                  <button class="btn btn-primary w-100 py-2" type="submit">Inicia Sesión</button>
+              </form> 
+          </article>
+      </div>
+  </div>
 </div>
