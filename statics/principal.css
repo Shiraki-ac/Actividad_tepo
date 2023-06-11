@@ -11,9 +11,22 @@ body{
 #sumar{
     background-color: rgb(255, 246, 73);
     border: none;
-    
+      position: absolute;
+      left: 18%;
+    border-width:50rem;
+    border-left:50rem;
 }
 #restar{
     background-color: rgb(56, 95, 255);
     border: none;
+    position: absolute;
+    left: 80%;
+    border-width:50rem;
+    border-left:50rem;
+}
+button{
+    
+    padding: auto;
+    top: 5rem;
+    transform: scale(250%);
 }
