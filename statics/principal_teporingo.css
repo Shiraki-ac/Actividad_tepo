@@ -1,5 +1,7 @@
-body{
-    background-color: rgb(255, 190, 230);
+.body{
+    background: url('./Media/teporingofondo.png')no-repeat;
+    background-size: 100%;
+    
 }
 .botones{
     text-align: center;
@@ -16,6 +18,9 @@ body{
     border-width:50rem;
     border-left:50rem;
 }
+
+
+
 #restar{
     background-color: rgb(56, 95, 255);
     border: none;
@@ -23,10 +28,12 @@ body{
     left: 80%;
     border-width:50rem;
     border-left:50rem;
+
 }
 button{
     
     padding: auto;
     top: 5rem;
     transform: scale(250%);
+    cursor: pointer;
 }

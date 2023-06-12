@@ -27,7 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = sanitize(isset($_POST['psw']) ? $_POST['psw'] : '');
 
     if (authenticateUser($email, $password)) {
-        echo '¡Bienvenido, ' . $email . '!';
+        header('Location: http://localhost/php/RepositoriosCW/Actividad_tepo/templates/casas.html');
+        exit();
     } else {
         echo '<title>Error</title>';
     }

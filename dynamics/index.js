@@ -4,17 +4,17 @@ window.addEventListener("load", () => {
     const ajolotes = document.getElementById("ajolotes");
     const regresar = document.getElementById("btn-regresar");
 
-    /*Falta reemplazar el console log por la dirección de la página principal*/
+    
     halcones.addEventListener("click", ()=>{
-        console.log("Tu casa es halcones");
+        window.location.href = "http://localhost/php/RepositoriosCW/Actividad_tepo/dynamics/principal_halcon.php";
     });
 
     tepos.addEventListener("click", ()=>{
-        console.log("Tu casa es Teporingos");
+        window.location.href = "http://localhost/php/RepositoriosCW/Actividad_tepo/dynamics/principal_teporingo.php";
     });
 
     ajolotes.addEventListener("click", ()=>{
-        console.log("Tu casa es Ajolotes");
+        window.location.href = "http://localhost/php/RepositoriosCW/Actividad_tepo/dynamics/principal_ajolote.php";
     });
 
 
