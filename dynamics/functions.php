@@ -25,6 +25,7 @@ function sanitize($input) {
         $input = trim($input);
         $input = stripslashes($input);
         $input = htmlspecialchars($input);
+        $input = filter_var($input, FILTER_SANITIZE_STRING);
     }
 
     return $input;
