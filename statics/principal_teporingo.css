@@ -1,5 +1,7 @@
 .body{
-    background-color: rgb(97, 255, 255);
+    background: url('./Media/teporingofondo.png')no-repeat;
+    background-size: 100%;
+    
 }
 .botones{
     text-align: center;
